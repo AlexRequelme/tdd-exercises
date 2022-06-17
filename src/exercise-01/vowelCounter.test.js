@@ -8,7 +8,14 @@ describe("Function that takes a string, and return the number of vowels", () => 
         expect(vowelCounter("a")).toBe(1);
     });
     test("The string contains multiple vowels and no consonants", () => {
-        const input = "abcd";
-        expect(vowelCounter(input)).toBe(input.length);
+        expect(vowelCounter("aaaeu")).toBe(5);
+    });
+    test("A string that contains multiple vowels and consonants", () => {
+        expect(vowelCounter("hello friend")).toBe(4);
+    });
+    test("A string that contains both upper and lower case characters", () => {
+        expect(
+            vowelCounter("A Quick broWN FOX JUmped over the LAZY DOG.")
+        ).toBe(12);
     });
 });

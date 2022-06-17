@@ -1,5 +1,6 @@
 function vowelCounter(word) {
-    return word.length;
+    const occurrences = word.match(/[aeiou]/gi);
+    return occurrences?.length || 0;
 }
 
 export default vowelCounter;
